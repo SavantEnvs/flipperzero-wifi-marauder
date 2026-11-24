@@ -1,0 +1,12 @@
+project: savantenvs/flipperzero-wifi-marauder
+target: script-json
+
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_script
+    libfuzzer: true
+    timeout: 5
+    dictionary: /mayhem/mayhem/script-json/script-json.dict
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/script-json/testsuite

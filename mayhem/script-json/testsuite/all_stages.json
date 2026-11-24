@@ -1,0 +1,19 @@
+{
+  "meta": {"description": "Every stage", "repeat": 2, "enableLed": true, "savePcap": false},
+  "stages": {
+    "scan": {"type": "station", "timeout": 5, "channel": 11},
+    "select": {"type": "station", "indexes": [0, 1, 2, 3]},
+    "deauth": {"timeout": 3},
+    "probe": {"timeout": 3},
+    "sniffRaw": {"timeout": 1},
+    "sniffBeacon": {"timeout": 1},
+    "sniffDeauth": {"timeout": 1},
+    "sniffEsp": {"timeout": 1},
+    "sniffPmkid": {"forceDeauth": false, "hopChannels": true, "channel": 6, "timeout": 2},
+    "sniffPwn": {"timeout": 1},
+    "beaconList": {"ssids": ["SSID 1", "SSID 2", "SSID 3"], "generate": 4, "timeout": 2},
+    "beaconAp": {"timeout": 2},
+    "exec": {"command": "clearlist -a"},
+    "delay": {"timeout": 1}
+  }
+}

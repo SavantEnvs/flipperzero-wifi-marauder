@@ -1,0 +1,1 @@
+{"meta":{"description":"ordered","repeat":1},"stages":[{"beaconList":{"ssids":["a","b"]}},{"beaconList":{"generate":4}},{"select":{"type":"ap","filter":"contains Guest"}},{"select":{"type":"ssid","filter":"all"}},{"scan":{"type":"ap","timeout":1}},{"exec":{"command":"settings -r"}}]}

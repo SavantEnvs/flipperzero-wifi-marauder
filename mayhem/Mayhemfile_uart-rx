@@ -1,0 +1,11 @@
+project: savantenvs/flipperzero-wifi-marauder
+target: uart-rx
+
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_uart
+    libfuzzer: true
+    timeout: 5
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/uart-rx/testsuite
